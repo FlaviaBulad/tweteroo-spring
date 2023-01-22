@@ -1,5 +1,7 @@
 package com.tweteroo.api.model;
 
+import com.tweteroo.api.dto.SignUpDTO;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,6 +13,11 @@ import lombok.Data;
 @Entity
 public class SignUp {
 
+    public SignUp(SignUpDTO data) {
+        this.username = data.username();
+        this.avatar = data.avatar();
+    }
+    
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
