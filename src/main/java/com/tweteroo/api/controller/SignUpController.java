@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.tweteroo.api.dto.SignUpDTO;
 import com.tweteroo.api.service.SignUpService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/sign-up")
 public class SignUpController {
@@ -18,7 +20,7 @@ public class SignUpController {
     private SignUpService service;
 
     @PostMapping
-    public ResponseEntity<String> save(@RequestBody SignUpDTO req) {
+    public ResponseEntity<String> save(@RequestBody @Valid SignUpDTO req) {
         System.out.println(req);
         service.save(req);
         return ResponseEntity.ok().body("OK");
