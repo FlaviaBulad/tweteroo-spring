@@ -29,5 +29,9 @@ public class SignUp {
 
     @Column(nullable = false)
     private String avatar;
+
+    public boolean isPresent() {
+        return false;
+    }
     
 }
