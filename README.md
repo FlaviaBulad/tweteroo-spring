@@ -11,16 +11,16 @@
     ```jsx
     {
       username: "bobesponja",
-    	avatar: "https://super.abril.com.br/wp-content/uploads/2020/09/04-09_gato_SITE.jpg?quality=70&strip=info"
+      avatar: "https://super.abril.com.br/wp-content/uploads/2020/09/04-09_gato_SITE.jpg?quality=70&strip=info"
     }
     ```
 - **POST** `/api/tweets`
 
-  - Receives (through the request body), the parameters `username` and `tweet`:
+  - Receives (through the request body), the parameters `username` and `text`:
     ```jsx
     {
       username: "bobesponja",
-      tweet: "eu amo o hub"
+      text: "eu amo o hub"
     }
     ```
 
